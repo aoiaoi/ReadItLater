@@ -1,0 +1,71 @@
+Getting Started with ReadItLater API library by(for?) PHP
+
+WHAT IS THIS? 
+-------------
+* Read It Later( http://readitlaterlist.com ) API library for PHP
+
+REQUIREMENTS the library
+------------------------
+* PHP 5.2.4 or later
+* Zend Framework(Zend_Rest_Client).
+
+API DOCUMENTATION of Read It Later
+----------------------------------
+* Please see Read It Later API appendix for more detailed information:
+  http://readitlaterlist.com/api/docs/
+
+INSTALLATION the library
+------------------------
+* Grab the following from the GitHub Repository
+  
+HOW TO USE the library
+----------------------
+require_once 'ReadItLater.php';
+
+* Creating the Read It Later Class
+Example #1:
+$ril = ReadItLater($apikey);
+
+* Add Method - Add a page to a user's list
+Example #2:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->add($url);
+
+* Send Method - Mark items as read, add multiple pages, change titles, or set tags
+Example #3:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->send();
+
+* Get Method - Retrieve a user's reading list
+Example #4:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->get();
+
+* Stats Method - Retrieve information about a user's list
+Example #5:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->stats();
+
+* Auth Method - Verify a user's account
+Example #6:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->auth();
+
+* Signup Method - Register a new user
+Example #7:
+$ril = new ReadItLater($apikey, $username, $password);
+$response = $ril->signup($newUsername, $newPassword);
+
+* Text Method - Get the text only version of a url
+Example #8:
+$ril = new ReadItLater($apikey);
+$response = $ril->text($url);
+
+* API Method - Return stats / current rate limit information about your API key
+Example #9:
+$ril = new ReadItLater($apikey);
+$response = $ril->api();
+
+
+
+
