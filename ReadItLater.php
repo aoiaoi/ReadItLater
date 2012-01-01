@@ -186,7 +186,7 @@ class ReadItLater {
 			'username' => $this->getUsername(),
 			'password' => $this->getPassword());
     
-    $parameters = $this->prepareParameters($parameters, $options);
+    $parameters = $this->_prepareParameters($parameters, $options);
     $this->_validateSendMethod($parameters);
     
     $this->_restClient->getHttpClient()->resetParameters();
